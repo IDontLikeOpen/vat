@@ -1,0 +1,48 @@
+@use 'sass:map';
+
+// basic
+$color-basic-100: #ffffff;
+$color-basic-200: #e6e7e9;
+$color-basic-250: #dee1ed;
+$color-basic-300: #5b5b65;
+$color-basic-350: #565758;
+$color-basic-375: #323232;
+$color-basic-400: #2c2c2e;
+$color-basic-410: #2c2c35;
+$color-basic-500: #1c1c1e;
+$color-basic-550: #1e1e24;
+$color-basic-700: #181819;
+$color-basic-800: #0f0f13;
+$color-basic-850: #0e0e0e;
+$color-basic-900: #000000;
+
+// secondary
+$color-secondary-200: #00c2e4;
+$color-secondary-250: #0f8ec7;
+$color-secondary-300: #777ebb;
+$color-secondary-800: #1a1a47;
+
+// third
+$color-secondary-500: #f3410e;
+
+// danger
+$color-danger-100: #dd425a;
+
+// success
+$color-success-100: #4caf50;
+
+//@mixin theme($themeName: '', $isGlobal: false) {
+//  $theme: map.get($themes, $themeName);
+//
+//  @if $isGlobal and $theme {
+//    [data-theme='#{$theme}'] {
+//      @content;
+//    }
+//  } @else if $theme {
+//    [data-theme='#{$theme}'] & {
+//      @content;
+//    }
+//  } @else {
+//    @content;
+//  }
+//}

@@ -1,0 +1,138 @@
+.multiselect {
+  $parent: &;
+
+  min-height: auto;
+  font-size: 1em;
+
+  &__icon {
+    &--tick {
+      width: em(13);
+      height: em(9);
+      opacity: 0;
+      transition: opacity $trans-time-fast;
+    }
+  }
+
+  &__input {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  &__placeholder {
+    //color: $color-primary-100;
+  }
+
+  &__select {
+    top: calc(50% + #{em(2)});
+    width: em(40);
+    height: em(40);
+    transform: translateY(-50%);
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-height: auto;
+
+    //color: $color-primary-100;
+    font-size: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: background-color $trans-time;
+  }
+
+  &__content-wrapper {
+    position: absolute !important;
+    top: em(55);
+    right: -1px;
+    left: -1px;
+    z-index: $level-3;
+    width: auto;
+    overflow: hidden auto;
+    background-color: transparent;
+  }
+
+  &__content {
+    width: 100%;
+    max-height: em(200);
+  }
+
+  &__single,
+  &__option {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    white-space: unset;
+    background: transparent;
+  }
+
+  &__single {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    //color: $color-primary-100;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color $trans-time-fast;
+
+    //@include hover {
+    //  color: $color-primary-100;
+    //}
+  }
+
+  &__option {
+    display: block;
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    overflow: hidden;
+    color: inherit;
+    background-color: transparent;
+    transition: background-color 0.3s;
+
+    @include hover {
+      #{$parent} {
+        &__icon {
+          &--tick {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__element {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    &--disabled {
+      pointer-events: none;
+      touch-action: none;
+    }
+  }
+
+  &__option--selected,
+  &__option--selected.multiselect__option--highlight {
+    background-color: transparent;
+  }
+
+  &--disabled {
+    opacity: 1;
+  }
+
+  &--active {
+    #{$parent} {
+      &__select {
+        transform: translateY(-50%) scale(-1);
+      }
+    }
+  }
+}

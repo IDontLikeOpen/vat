@@ -1,0 +1,26 @@
+@use "sass:map";
+
+@mixin typography($name, $typography) {
+  $styles: map.get($typography, $name);
+
+  font-family: map.get($styles, font-family);
+  font-size: em(map.get($styles, font-size));
+  font-weight: map.get($styles, font-weight);
+  line-height: (map.get($styles, line-height) / map.get($styles, font-size));
+  text-transform: map.get($styles, text-transform);
+  letter-spacing: #{map.get($styles, letter-spacing)}em;
+}
+
+@mixin typography-class($typography, $suffix: false) {
+  @each $label, $map in $typography {
+    $suffix-string: '';
+
+    @if  $suffix {
+      $suffix-string: '-#{$suffix}';
+    }
+
+    .#{$label + $suffix-string} {
+      @include typography($label, $typography);
+    }
+  }
+}

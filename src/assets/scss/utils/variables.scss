@@ -1,0 +1,60 @@
+// devices
+$device-mobile: 'is-mobile';
+$device-desktop: 'is-desktop';
+
+// path
+$img-path: '/img/';
+$font-path: '/fonts/';
+
+// Typography
+$sans: sans-serif !default;
+$serif: serif !default;
+
+// font
+$font-default: '', $sans;
+$font-accent: '', $sans;
+
+// font
+$base-font-size: 16;
+$base-line-height: 1.25 !default;
+
+// fontWeight
+$thin: 100 !default;
+$ultra-light: 200 !default;
+$light: 300 !default;
+$regular: 400 !default;
+$medium: 500 !default;
+$semi-bold: 600 !default;
+$bold: 700 !default;
+$ultra-bold: 800 !default;
+$black: 900 !default;
+
+// paths
+$fonts-path: '/fonts/';
+$images-path: '/img/';
+
+// timing
+$time-faster: 100ms;
+$time-fast: 200ms;
+$time-normal: 300ms;
+$time-slow: 400ms;
+$time-slower: 500ms;
+
+// ZIndex
+$level-0: 0;
+$level-1: 1;
+$level-2: 2;
+$level-3: 3;
+$level-4: 4;
+$level-5: 5;
+$level-6: 6;
+$level-7: 7;
+$level-absolute: 100;
+
+// Animation
+// -------------------------
+$trans-time: 0.3s;
+$trans-time-fast: $trans-time * 0.5;
+$trans-time-slow: $trans-time * 1.5;
+$trans-time-super-slow: $trans-time * 2;
+$trans-time-ultra-slow: $trans-time * 2.5;
